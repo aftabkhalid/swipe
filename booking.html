@@ -28,13 +28,7 @@
   <link rel="stylesheet" href="css/custom.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Replace the variables below. -->
-  <script>
-    function onSubmit(token) {
-      document.getElementById("booking-form").submit();
-    }
-  </script>
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdhMrkpAAAAADOHZLkGphEfZIPu1Eyp1F57dAeU"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
   <title>Booking Form</title>
 </head>
@@ -90,6 +84,9 @@
 
                         <form class="gform" method="POST" id="booking-form" name="submit-to-google-sheet"
                           action="https://script.google.com/macros/s/AKfycbyxZwQ7KmLqow8VSgTVa8RiQix0tmkd-xpEExLlQIJq8r14Q-CTY4e5cV64SwQMjSRZnA/exec">
+
+                          <div class="g-recaptcha" data-sitekey="6Lc5O7kpAAAAAIP58C6nDnNwuewk5MdQgdujKrt7"
+                            data-action="LOGIN"></div>
 
                           <div class="thankyou_message" style="display:none">
                             <div class="alert alert-success" role="alert">
@@ -181,16 +178,9 @@
                               <div class="clear"> </div>
                               <div class="col-md-12">
                                 <div class="form-group">
-                                  <!-- <input type="submit" value="Submit Now"
+                                  <input type="submit" value="Submit Now"
                                     class="btn w-100 text-white bg-color rounded-3 py-3 fw-semibold text-uppercase mt-2">
-                                  <div class="submitting"></div> -->
-
-                                  <button
-                                    class="g-recaptcha btn w-100 text-white bg-color rounded-3 py-3 fw-semibold text-uppercase mt-2"
-                                    data-sitekey="6LdhMrkpAAAAADOHZLkGphEfZIPu1Eyp1F57dAeU" data-callback='onSubmit'
-                                    data-action='submit'>
-                                    Submit Nowww
-                                  </button>
+                                  <div class="submitting"></div>
 
                                 </div>
                               </div>
