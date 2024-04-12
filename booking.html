@@ -30,6 +30,17 @@
 
   <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
+  <script>
+    window.onload = function () {
+      var recaptcha = document.forms["booking-form"]["g-recaptcha-response"];
+      recaptcha.required = true;
+      recaptcha.oninvalid = function (e) {
+        // do something
+        alert("Please complete the captcha");
+      }
+    }
+  </script>
+
   <title>Booking Form</title>
 </head>
 
