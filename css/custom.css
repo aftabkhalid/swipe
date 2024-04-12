@@ -8,3 +8,11 @@
 #logo img {
 	max-width: 50%;
 }
+
+form {
+	margin-bottom: 0;
+}
+
+.card {
+	border-radius: 1rem;
+}
