@@ -14,5 +14,6 @@ form {
 }
 
 .card {
-	border-radius: 2rem;
+	border-radius: 1rem;
+	border: 2px solid rgba(0, 0, 0, .1);
 }
