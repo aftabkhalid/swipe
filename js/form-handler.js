@@ -121,3 +121,48 @@
     }
   }
 })();
+
+//
+// On form submit open the loading container
+
+const form = document.getElementById('booking-form');
+const spinner = document.getElementById('loader');
+const thankYouMessage = document.querySelector('.thankyou_message');
+
+// Function to hide the loader and scroll to the thank you section
+function hideLoaderAndScroll() {
+  spinner.classList.remove('show');
+  window.scrollTo({
+    top: thankYouMessage.offsetTop,
+    behavior: 'smooth'
+  });
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  //form.classList.toggle('fade-out');
+  spinner.classList.toggle('show');
+
+  // Check if the thank you message is displayed
+  const isThankYouMessageDisplayed = thankYouMessage.style.display === 'block';
+
+  // If the thank you message is displayed, hide the loader and scroll to it
+  if (isThankYouMessageDisplayed) {
+    hideLoaderAndScroll();
+  }
+});
+
+// Listen for changes in the display property of the thank you message
+const observer = new MutationObserver((mutationsList) => {
+  for (let mutation of mutationsList) {
+    if (mutation.attributeName === 'style' && mutation.target === thankYouMessage) {
+      const isDisplayed = thankYouMessage.style.display === 'block';
+      if (isDisplayed) {
+        hideLoaderAndScroll();
+      }
+    }
+  }
+});
+
+// Start observing changes in the thank you message display property
+observer.observe(thankYouMessage, { attributes: true });
