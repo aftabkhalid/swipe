@@ -163,8 +163,12 @@
                             <div class="col-12">
                               <div class="form-group">
                                 <label for="city" class="form-label">City *</label>
-                                <input type="text" class="form-control" name="city" id="city"
-                                  placeholder="Enter your city" required="">
+                                <!-- <input type="text" class="form-control" name="city" id="city"
+                                  placeholder="Enter your city" required=""> -->
+                                  <select class="form-select" name="city" id="city" required>
+                                    <option  selected disabled value="">- City -</option>
+                                    <option value="Lahore">Lahore</option>
+                                  </select>
                               </div>
                             </div>
 
