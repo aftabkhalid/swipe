@@ -62,3 +62,7 @@ form {
 .fade-out {
 	opacity: 0;
 }
+
+ul {
+	margin: 0 0 0 20px;
+}
