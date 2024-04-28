@@ -66,3 +66,9 @@ form {
 ul {
 	margin: 0 0 0 20px;
 }
+
+.whatsapp {
+	position: absolute;
+	bottom: 0;
+	right: 32px;
+}
