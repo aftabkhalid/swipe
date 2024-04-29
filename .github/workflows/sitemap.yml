@@ -19,7 +19,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1.10.0
       with:
-        base-url-path: https://swipe.pk/
+        base-url-path: https://www.swipe.pk/
         additional-extensions: doc docx ppt pptx xls xlsx
 
     - name: Output stats
