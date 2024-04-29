@@ -31,7 +31,7 @@ jobs:
       run: |
         if [[ `git status --porcelain sitemap.xml` ]]; then
           git config --global user.name 'Aftab Khalid'
-          git config --global user.email 'aftabkhalid@users.noreply.github.com'
+          git config --global user.email 'iffi.d.s@gmail.com
           git add sitemap.xml
           git commit -m "Automated sitemap update" sitemap.xml
           git push
